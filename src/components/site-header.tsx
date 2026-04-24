@@ -16,7 +16,7 @@ export function SiteHeader() {
       <Container className="flex items-center justify-between gap-6 py-4">
         <Link href="/" className="group flex items-center gap-3">
           <Image
-            src="/images/homepage/Logo Only.png"
+            src="/Images/Homepage/Logo Only.png"
             alt="Field and Habitat logo"
             width={320}
             height={100}
