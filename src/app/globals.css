@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f6f1e8;
+  --foreground: #182019;
+  --canvas: #f6f1e8;
+  --surface: #f0eadf;
+  --surface-strong: #e2d8c6;
+  --card: #fbf8f2;
+  --border: rgba(24, 32, 25, 0.12);
+  --ink: #182019;
+  --muted: #566055;
+  --pine: #284233;
+  --pine-deep: #18291f;
+  --moss: #6d7551;
+  --sand: #c8b28d;
+  --clay: #8b684e;
+  --shadow: 0 24px 80px rgba(24, 32, 25, 0.12);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-canvas: var(--canvas);
+  --color-surface: var(--surface);
+  --color-surface-strong: var(--surface-strong);
+  --color-card: var(--card);
+  --color-border: var(--border);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-pine: var(--pine);
+  --color-pine-deep: var(--pine-deep);
+  --color-moss: var(--moss);
+  --color-sand: var(--sand);
+  --color-clay: var(--clay);
+  --font-sans: "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
+  --font-serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia,
+    serif;
+  --shadow-editorial: var(--shadow);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+a,
+button,
+input,
+textarea {
+  transition:
+    color 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease,
+    opacity 180ms ease,
+    transform 180ms ease;
+}
+
+::selection {
+  background: rgba(109, 117, 81, 0.28);
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.texture-grid {
+  background-image:
+    linear-gradient(rgba(24, 32, 25, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(24, 32, 25, 0.06) 1px, transparent 1px);
+  background-size: 42px 42px;
+}
+
+.topo-lines {
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(109, 117, 81, 0.18) 0, transparent 30%),
+    radial-gradient(circle at 70% 40%, rgba(40, 66, 51, 0.14) 0, transparent 34%),
+    radial-gradient(circle at 50% 80%, rgba(139, 104, 78, 0.12) 0, transparent 26%);
+}
+
+.editorial-shell {
+  position: relative;
+}
+
+.editorial-shell::before {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(251, 248, 242, 0.7), rgba(251, 248, 242, 0)),
+    radial-gradient(circle at top left, rgba(200, 178, 141, 0.1), transparent 26%);
+  content: "";
+  pointer-events: none;
+}
+
+.balanced-text {
+  text-wrap: balance;
+}
+
+.section-fade {
+  animation: section-fade 700ms ease both;
+}
+
+@keyframes section-fade {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
