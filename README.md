@@ -31,8 +31,31 @@ npm start
 1. Push this repository to GitHub, GitLab, or Bitbucket.
 2. Import the repo into Vercel.
 3. Keep the framework preset as `Next.js`.
-4. Add your production domain: `fieldandhabitat.com`.
-5. Deploy.
+4. Add these environment variables before production use:
+   - `RESEND_API_KEY`
+   - `RESEND_FROM_EMAIL`
+   - `CONTACT_TO_EMAIL`
+5. Add your production domain: `fieldandhabitat.com`.
+6. Deploy.
+
+## Contact form setup with Resend
+
+The contact form posts to `src/app/api/contact/route.ts`.
+
+Set these in Vercel:
+
+- `RESEND_API_KEY`
+  - Your Resend API key.
+- `RESEND_FROM_EMAIL`
+  - A verified sender such as `Field and Habitat <contact@fieldandhabitat.com>`.
+- `CONTACT_TO_EMAIL`
+  - Where inquiries should be delivered, for example `editorial@fieldandhabitat.com`.
+
+Notes:
+
+- The `from` address must use a domain you verify in Resend.
+- If `CONTACT_TO_EMAIL` is omitted, the site falls back to `editorial@fieldandhabitat.com`.
+- After adding the variables in Vercel, redeploy once so the live form can use them.
 
 ## CMS integration notes
 

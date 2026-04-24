@@ -1,3 +1,4 @@
+import { ContactForm } from "@/components/contact-form";
 import { Container } from "@/components/container";
 import { JsonLd } from "@/components/json-ld";
 import { PageHero } from "@/components/page-hero";
@@ -30,41 +31,7 @@ export default function ContactPage() {
       />
       <section className="py-10 sm:py-12">
         <Container className="max-w-3xl">
-          <form className="space-y-3 rounded-[2rem] border border-border bg-card p-7 shadow-editorial sm:p-8">
-            <div className="grid gap-3 sm:grid-cols-2">
-              <label className="space-y-1.5 text-sm text-muted">
-                <span>Name</span>
-                <input
-                  type="text"
-                  className="h-12 w-full rounded-2xl border border-border bg-canvas px-4 text-ink outline-none"
-                />
-              </label>
-              <label className="space-y-1.5 text-sm text-muted">
-                <span>Email</span>
-                <input
-                  type="email"
-                  className="h-12 w-full rounded-2xl border border-border bg-canvas px-4 text-ink outline-none"
-                />
-              </label>
-            </div>
-            <label className="space-y-1.5 text-sm text-muted">
-              <span>Subject</span>
-              <input
-                type="text"
-                className="h-12 w-full rounded-2xl border border-border bg-canvas px-4 text-ink outline-none"
-              />
-            </label>
-            <label className="space-y-1.5 text-sm text-muted">
-              <span>Message</span>
-              <textarea className="min-h-40 w-full rounded-[1.5rem] border border-border bg-canvas px-4 py-3 text-ink outline-none" />
-            </label>
-            <button
-              type="submit"
-              className="rounded-full bg-pine px-5 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-[#f5efe4] hover:bg-pine-deep"
-            >
-              Send Inquiry
-            </button>
-          </form>
+          <ContactForm />
         </Container>
       </section>
     </>
