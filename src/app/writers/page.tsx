@@ -27,7 +27,7 @@ export default function WritersPage() {
       <PageHero
         eyebrow="Editorial Team"
         title="Meet the writers"
-        description="This page is ready for headshots, contributor names, and full biographies. Replace the neutral image areas with personal photos when they are available."
+        description=""
       />
       <section className="py-12 sm:py-14">
         <Container className="grid gap-6">
