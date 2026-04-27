@@ -124,14 +124,6 @@ export const authors: Author[] = [
     imageLabel: "Portrait placeholder",
     imageSrc: "/Photos for Writers/Connor Jackson Trout.JPG",
   },
-  {
-    slug: "jordan-cowen",
-    name: "Jordan Cowen",
-    role: "Writer and Chef",
-    shortBio: "",
-    bio: "",
-    imageLabel: "Portrait placeholder",
-  },
 ];
 
 const p = (
