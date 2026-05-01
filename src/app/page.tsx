@@ -12,7 +12,7 @@ import { siteConfig } from "@/lib/site";
 export const metadata = buildMetadata({
   title: "Outdoor Traditions for Modern Conservation",
   description:
-    "Field and Habitat is a premium outdoor media brand built for credible hunting, fishing, gear, cooking, and conservation coverage.",
+    "Field and Habitat is a premium outdoor media brand built for credible hunting, fishing, finance, cooking, and conservation coverage.",
   path: "/",
 });
 
@@ -135,7 +135,7 @@ export default function Home() {
           <SectionHeading
             eyebrow="Browse"
             title="Five Core Pillars"
-            description="Coverage is organized around hunting, fishing, gear, conservation, and cooking so readers can move quickly to the stories that matter most to them."
+            description="Coverage is organized around hunting, fishing, finance, conservation, and cooking so readers can move quickly to the stories that matter most to them."
           />
           <CategoryGrid />
         </Container>

@@ -1,7 +1,7 @@
 export type CategorySlug =
   | "hunting"
   | "fishing"
-  | "gear"
+  | "finance"
   | "conservation"
   | "cooking";
 
@@ -85,13 +85,13 @@ export const categories: Category[] = [
     featuredTags: ["Bass", "Trout", "Fly Fishing", "Boats"],
   },
   {
-    slug: "gear",
-    name: "Gear",
-    eyebrow: "Field Kit",
+    slug: "finance",
+    name: "Finance",
+    eyebrow: "Business",
     description:
-      "Measured coverage of field gear, tackle, optics, apparel, tools, and practical buying decisions that hold up outdoors.",
+      "Coverage of the economics behind the outdoors, from access and land to industry shifts, business, and the cost of participation.",
     accent: "from-[#4d5a4b] to-sand",
-    featuredTags: ["Optics", "Apparel", "Tackle", "Reviews"],
+    featuredTags: ["Industry", "Land", "Policy", "Markets"],
   },
   {
     slug: "conservation",
@@ -313,8 +313,8 @@ export const articles: Article[] = [
     title: "The Truth About the 6.5 Creedmoor: Facts, Myths, and Real Hunting Use",
     excerpt:
       "The 6.5 Creedmoor has become one of the most talked about rifle cartridges of the last decade.",
-    category: "gear",
-    tags: ["Gear", "Hunting", "6.5 Creedmoor"],
+    category: "hunting",
+    tags: ["Hunting", "6.5 Creedmoor"],
     publishedAt: "2026-04-24T10:51:43-04:00",
     readingTime: 6,
     author: authors[0],

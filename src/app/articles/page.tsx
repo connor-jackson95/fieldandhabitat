@@ -7,7 +7,7 @@ import { siteConfig } from "@/lib/site";
 export const metadata = buildMetadata({
   title: "Articles",
   description:
-    "Search and browse Field and Habitat articles across hunting, fishing, gear, conservation, and cooking.",
+    "Search and browse Field and Habitat articles across hunting, fishing, finance, conservation, and cooking.",
   path: "/articles",
 });
 

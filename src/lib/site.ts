@@ -3,7 +3,7 @@ export const siteConfig = {
   domain: "fieldandhabitat.com",
   url: "https://fieldandhabitat.com",
   description:
-    "A trusted, modern outdoor media brand covering hunting, fishing, gear, cooking, and conservation across the United States.",
+    "A trusted, modern outdoor media brand covering hunting, fishing, finance, cooking, and conservation across the United States.",
   mission: "Sharing stories to preserve traditions and habitat",
   socialLinks: [
     { label: "Instagram", href: "https://instagram.com" },

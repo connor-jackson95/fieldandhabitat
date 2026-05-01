@@ -6,7 +6,7 @@ import { buildMetadata } from "@/lib/metadata";
 export const metadata = buildMetadata({
   title: "Categories",
   description:
-    "Browse Field and Habitat coverage across hunting, fishing, gear, conservation, and cooking.",
+    "Browse Field and Habitat coverage across hunting, fishing, finance, conservation, and cooking.",
   path: "/categories",
 });
 

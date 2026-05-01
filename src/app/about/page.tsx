@@ -27,7 +27,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="Mission"
         title="Sharing stories to preserve traditions and habitat"
-        description="Field and Habitat is built to cover hunting, fishing, gear, cooking, and conservation."
+        description="Field and Habitat is built to cover hunting, fishing, finance, cooking, and conservation."
       />
       <section className="py-12 sm:py-14">
         <Container className="space-y-8">
