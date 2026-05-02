@@ -216,6 +216,34 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
           <article className="rounded-[2rem] border border-border bg-card p-7 shadow-editorial sm:p-10">
             <div className="space-y-6 text-base leading-8 text-muted sm:text-lg">
               {article.body.map((block, index) => {
+                if (block.type === "gallery") {
+                  return (
+                    <figure key={`gallery-${index}`} className="space-y-3">
+                      <div className="grid gap-4 sm:grid-cols-2">
+                        {block.images.map((image) => (
+                          <div
+                            key={image.src}
+                            className="overflow-hidden rounded-[1.5rem] border border-border bg-surface"
+                          >
+                            <Image
+                              src={image.src}
+                              alt={image.alt}
+                              width={1600}
+                              height={1000}
+                              className="h-full w-full object-cover"
+                            />
+                          </div>
+                        ))}
+                      </div>
+                      {block.caption ? (
+                        <figcaption className="text-sm italic leading-7 text-muted">
+                          {block.caption}
+                        </figcaption>
+                      ) : null}
+                    </figure>
+                  );
+                }
+
                 if (block.type === "image") {
                   return (
                     <figure key={`image-${index}`} className="space-y-3">

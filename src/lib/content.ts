@@ -49,6 +49,14 @@ export type ArticleBlock =
       src: string;
       alt: string;
       caption?: string;
+    }
+  | {
+      type: "gallery";
+      images: Array<{
+        src: string;
+        alt: string;
+      }>;
+      caption?: string;
     };
 
 export interface Article {
@@ -431,14 +439,17 @@ export const articles: Article[] = [
       p("I am sure the rest of the HOA board would disagree with my sentiment, but if I were given the option to wave a magic wand and remove the muskrats from our ponds I would have to ask, “Where is the fun in that?”"),
       p("Moral of the story, even in suburban America, there are still ways to find opportunities to get outside and find your own wilderness."),
       {
-        type: "image",
-        src: "/Photos for Articles/ConnorMuskrat (1).jpeg",
-        alt: "Connor Jackson with a muskrat",
-      },
-      {
-        type: "image",
-        src: "/Photos for Articles/LukeMuskrat.jpeg",
-        alt: "Luke with a muskrat",
+        type: "gallery",
+        images: [
+          {
+            src: "/Photos for Articles/ConnorMuskrat (1).jpeg",
+            alt: "Connor Jackson with a muskrat",
+          },
+          {
+            src: "/Photos for Articles/LukeMuskrat.jpeg",
+            alt: "Luke with a muskrat",
+          },
+        ],
       },
     ],
   },
