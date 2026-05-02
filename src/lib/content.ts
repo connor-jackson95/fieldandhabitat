@@ -409,6 +409,39 @@ export const articles: Article[] = [
       p("The real lesson is simple. Ignore internet myths and match the cartridge to your hunting style. The 6.5 Creedmoor is not magic, but it is absolutely one of the most practical hunting cartridges of the modern era."),
     ],
   },
+  {
+    slug: "muskrats-hoas-and-a-backyard-trapline",
+    title: "Muskrats, HOAs, and a Backyard Trapline",
+    excerpt:
+      "My wife and I bought our first house in Noblesville, Indiana, in the summer of 2024.",
+    category: "hunting",
+    tags: ["Hunting", "Trapping", "Muskrats", "Indiana"],
+    publishedAt: "2026-04-18T00:07:00Z",
+    updatedAt: "2026-05-02T01:17:00Z",
+    heroImage: "/Photos for Articles/Muskrat Lodge.JPG",
+    readingTime: 3,
+    author: authors[0],
+    body: [
+      p("My wife and I bought our first house in Noblesville, Indiana, in the summer of 2024. We had just moved back to Indiana from Utah with the dream of settling down and starting a family. Even with that dream becoming a reality, I found myself missing the feeling of having the wilderness at my disposal."),
+      p("Our house sat in a new subdivision where the HOA board had not been formally established. I decided to join the board in hopes of meeting my neighbors, getting involved in the community, and maybe even reducing the annual fee. A few weeks in, we received a complaint that one of the neighborhood ponds was “infested with beavers.”"),
+      p("Hearing this at our meeting immediately sparked my interest and I had to check out the “beaver” for myself. After strapping on my hip boots and investigating the infestation, I quickly realized the rodents building lodges and digging into the banks were not beavers, but a colony of muskrats."),
+      p("At this point, I had two options. Report back to the board and call an exterminator or take this opportunity to run a trapline in my backyard. At the next meeting, I volunteered to trap them for free with a high school friend. The rest of the board unanimously agreed, and we were off to the local trapping store to get outfitted."),
+      p("Armed with a dozen 110 Conibears and cage traps, we hit the pond hard on opening week. We targeted the easy to spot lodges and runs and anxiously waited to check them the next morning. “Like shooting fish in a barrel” does not quite capture what happened that first week. Three days into the season, we pulled out 28 muskrats. Our confidence was sky high, and we compared ourselves to the likes of Bridger."),
+      p("We did a real number on the muskrat colony that first season, and the muskrat erosion and lodges were significantly reduced. But even now, two years later, we still set traps out every season opener and remove a few rats."),
+      p("I am sure the rest of the HOA board would disagree with my sentiment, but if I were given the option to wave a magic wand and remove the muskrats from our ponds I would have to ask, “Where is the fun in that?”"),
+      p("Moral of the story, even in suburban America, there are still ways to find opportunities to get outside and find your own wilderness."),
+      {
+        type: "image",
+        src: "/Photos for Articles/ConnorMuskrat (1).jpeg",
+        alt: "Connor Jackson with a muskrat",
+      },
+      {
+        type: "image",
+        src: "/Photos for Articles/LukeMuskrat.jpeg",
+        alt: "Luke with a muskrat",
+      },
+    ],
+  },
 ];
 
 export const allTags = Array.from(
