@@ -18,9 +18,9 @@ export const metadata = buildMetadata({
 
 const featuredArticle = articles[0];
 const recentArticles = [
-  articles.find((article) => article.slug === "possible-changes-coming-for-indiana-bobcat-season"),
   articles.find((article) => article.slug === "bass-on-the-long-rod"),
   articles.find((article) => article.slug === "muskrats-hoas-and-a-backyard-trapline"),
+  articles.find((article) => article.slug === "the-truth-about-the-6-5-creedmoor"),
 ].filter((article): article is Article => Boolean(article));
 
 export default function Home() {
