@@ -7,6 +7,8 @@ export function PageHero({
   description,
   children,
   className,
+  shellClassName,
+  bodyClassName,
   titleClassName,
 }: Readonly<{
   eyebrow: string;
@@ -14,14 +16,26 @@ export function PageHero({
   description: string;
   children?: React.ReactNode;
   className?: string;
+  shellClassName?: string;
+  bodyClassName?: string;
   titleClassName?: string;
 }>) {
   return (
     <section className={cn("border-b border-border/70 py-10 sm:py-12", className)}>
       <Container>
-        <div className="editorial-shell overflow-hidden rounded-[2.25rem] border border-border bg-card px-6 py-8 shadow-editorial sm:px-8 sm:py-10 lg:px-12">
+        <div
+          className={cn(
+            "editorial-shell overflow-hidden rounded-[2.25rem] border border-border bg-card px-6 py-8 shadow-editorial sm:px-8 sm:py-10 lg:px-12",
+            shellClassName,
+          )}
+        >
           <div className="topo-lines absolute inset-0 opacity-70" />
-          <div className="relative grid gap-6 lg:grid-cols-[1fr_0.6fr] lg:items-end">
+          <div
+            className={cn(
+              "relative grid gap-6 lg:grid-cols-[1fr_0.6fr] lg:items-end",
+              bodyClassName,
+            )}
+          >
             <div className="space-y-4 section-fade">
               <p className="text-xs uppercase tracking-[0.35em] text-moss">{eyebrow}</p>
               <h1

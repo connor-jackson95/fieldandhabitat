@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Container } from "@/components/container";
 import { JsonLd } from "@/components/json-ld";
 import { PageHero } from "@/components/page-hero";
-import { PlaceholderCard } from "@/components/placeholder-card";
 import { categories, getArticlesByCategory, getCategory } from "@/lib/content";
 import { siteConfig } from "@/lib/site";
 
@@ -64,63 +64,53 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
       <PageHero
         eyebrow={category.eyebrow}
         title={category.name}
-        description={category.description}
-      >
-        <div className="rounded-[1.75rem] border border-border bg-surface p-6">
-          <p className="text-xs uppercase tracking-[0.3em] text-moss">Featured tags</p>
-          <div className="mt-4 flex flex-wrap gap-2">
-            {category.featuredTags.map((tag) => (
-              <span
-                key={tag}
-                className="rounded-full border border-border bg-card px-4 py-2 text-xs uppercase tracking-[0.2em] text-muted"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
-        </div>
-      </PageHero>
-      <section className="py-12 sm:py-14">
-        <Container className="space-y-8">
-          <div className="flex flex-wrap items-center justify-between gap-4">
-            <div>
-              <p className="text-xs uppercase tracking-[0.3em] text-moss">Archive state</p>
-              <h2 className="mt-3 font-serif text-3xl text-ink">Category landing page</h2>
-            </div>
+        description=""
+        className="py-6 sm:py-8"
+        shellClassName="px-5 py-5 sm:px-6 sm:py-6 lg:px-8"
+        bodyClassName="gap-3"
+        titleClassName="text-3xl sm:text-4xl lg:text-5xl"
+      />
+      <section className="py-4 sm:py-5">
+        <Container className="space-y-2">
+          <div className="flex justify-end">
             <Link
               href="/articles"
-              className="rounded-full border border-border bg-surface px-5 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-pine hover:bg-surface-strong"
+              className="rounded-full border border-border bg-surface px-5 py-2.5 text-sm font-semibold uppercase tracking-[0.18em] text-pine hover:bg-surface-strong"
             >
               View all articles
             </Link>
           </div>
           {categoryArticles.length > 0 ? (
-            <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
               {categoryArticles.map((article) => (
                 <Link
                   key={article.slug}
                   href={`/articles/${article.slug}`}
                   className="rounded-[1.75rem] border border-border bg-card p-6 shadow-editorial"
                 >
+                  {article.heroImage ? (
+                    <div className="mb-6 h-48 overflow-hidden rounded-[1.35rem] border border-border bg-surface">
+                      <Image
+                        src={article.heroImage}
+                        alt={article.title}
+                        width={1600}
+                        height={1000}
+                        className={`h-full w-full object-cover ${
+                          article.slug === "bass-on-the-long-rod" ? "object-top" : ""
+                        }`}
+                      />
+                    </div>
+                  ) : null}
                   <h3 className="font-serif text-2xl text-ink">{article.title}</h3>
                   <p className="mt-3 text-sm leading-7 text-muted">{article.excerpt}</p>
                 </Link>
               ))}
             </div>
           ) : (
-            <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-              <PlaceholderCard
-                label="Feature slot"
-                detail="Ready for a lead story, strong visuals, and category-specific metadata."
-              />
-              <PlaceholderCard
-                label="Service journalism slot"
-                detail="Prepared for practical how-to coverage tied to tags and future search."
-              />
-              <PlaceholderCard
-                label="Analysis slot"
-                detail="Reserved for conservation, policy, seasonal, or field reporting."
-              />
+            <div className="rounded-[1.75rem] border border-border bg-card p-6 shadow-editorial">
+              <p className="text-sm leading-7 text-muted">
+                No published articles are in this category yet.
+              </p>
             </div>
           )}
         </Container>
