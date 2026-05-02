@@ -219,7 +219,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                 if (block.type === "gallery") {
                   return (
                     <figure key={`gallery-${index}`} className="space-y-3">
-                      <div className="grid gap-4 sm:grid-cols-2">
+                      <div className="mx-auto grid max-w-[720px] gap-4 sm:grid-cols-2">
                         {block.images.map((image) => (
                           <div
                             key={image.src}

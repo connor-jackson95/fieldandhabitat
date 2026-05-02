@@ -5,7 +5,7 @@ import { CategoryGrid } from "@/components/category-grid";
 import { Container } from "@/components/container";
 import { JsonLd } from "@/components/json-ld";
 import { SectionHeading } from "@/components/section-heading";
-import { articles } from "@/lib/content";
+import { articles, type Article } from "@/lib/content";
 import { buildMetadata } from "@/lib/metadata";
 import { siteConfig } from "@/lib/site";
 
@@ -16,8 +16,12 @@ export const metadata = buildMetadata({
   path: "/",
 });
 
-const recentArticles = articles.slice(0, 3);
-const featuredArticle = recentArticles[0];
+const featuredArticle = articles[0];
+const recentArticles = [
+  articles.find((article) => article.slug === "possible-changes-coming-for-indiana-bobcat-season"),
+  articles.find((article) => article.slug === "bass-on-the-long-rod"),
+  articles.find((article) => article.slug === "muskrats-hoas-and-a-backyard-trapline"),
+].filter((article): article is Article => Boolean(article));
 
 export default function Home() {
   return (
