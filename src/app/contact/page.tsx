@@ -31,6 +31,33 @@ export default function ContactPage() {
       />
       <section className="py-10 sm:py-12">
         <Container className="max-w-3xl">
+          <div className="mb-4 rounded-[1.75rem] border border-border bg-card px-6 py-5 shadow-editorial">
+            <p className="text-xs uppercase tracking-[0.3em] text-moss">Social</p>
+            <div className="mt-3 space-y-2 text-sm leading-7 text-muted sm:text-base">
+              <p>
+                Instagram:{" "}
+                <a
+                  href="https://instagram.com/fieldandhabitat"
+                  className="font-semibold text-pine hover:text-pine-deep"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  @fieldandhabitat
+                </a>
+              </p>
+              <p>
+                TikTok:{" "}
+                <a
+                  href="https://tiktok.com/@fieldandhabitat"
+                  className="font-semibold text-pine hover:text-pine-deep"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  @fieldandhabitat
+                </a>
+              </p>
+            </div>
+          </div>
           <ContactForm />
         </Container>
       </section>
