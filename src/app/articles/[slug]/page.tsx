@@ -265,6 +265,21 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                   );
                 }
 
+                if (block.type === "link") {
+                  return (
+                    <p key={`link-${index}`}>
+                      <a
+                        href={block.href}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="font-semibold text-pine underline-offset-4 hover:underline"
+                      >
+                        {block.label}
+                      </a>
+                    </p>
+                  );
+                }
+
                 if (block.type === "table") {
                   const [head, ...rows] = block.rows;
 

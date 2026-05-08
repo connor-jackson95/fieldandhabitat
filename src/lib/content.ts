@@ -51,6 +51,11 @@ export type ArticleBlock =
       caption?: string;
     }
   | {
+      type: "link";
+      label: string;
+      href: string;
+    }
+  | {
       type: "gallery";
       images: Array<{
         src: string;
@@ -520,53 +525,54 @@ export const articles: Article[] = [
         italic: true,
         size: "small",
       }),
-      p("Fishing lakes and ponds with a fly rod is one of the most versatile and underrated ways to chase freshwater fish. Whether you are throwing poppers along a weed edge, stripping a Clouser through open water, or picking off bluegill in the shallows, the right rod and reel combo makes all the difference.", ["makes"]),
+      p("Fishing lakes and ponds with a fly rod is one of the most versatile and underrated ways to chase freshwater fish. Whether you are throwing poppers along a weed edge, stripping a Clouser through open water, or picking off bluegill in the shallows, the right rod and reel combo makes all the difference."),
       p("The challenge is finding a setup that can do a little bit of everything without overcomplicating things. Below are five of the best options on the market, broken down by where they shine."),
       h("Orvis Clearwater Combo Best Overall"),
-      p("The Orvis Clearwater has become the go to recommendation for a reason. It hits the sweet spot between performance, durability, and price.", ["The Orvis", "go to"]),
+      p("The Orvis Clearwater has become the go to recommendation for a reason. It hits the sweet spot between performance, durability, and price."),
       p("The rod has a medium fast action, which means it is forgiving enough for newer anglers but still has enough backbone to throw larger flies. The included reel is simple but reliable, with a drag system that can handle bass without issue."),
-      p("If you are fishing ponds or smaller lakes, this setup can do it all. Poppers at dusk, streamers for cruising bass, and even lighter presentations for panfish all feel right at home.", ["fishing"]),
+      p("If you are fishing ponds or smaller lakes, this setup can do it all. Poppers at dusk, streamers for cruising bass, and even lighter presentations for panfish all feel right at home."),
       list([
-        { text: "Price $489", bold: true },
-        { text: "Best use All around fishing", bold: true },
-        { text: "Ideal setup 9 foot 6 weight", bold: true },
+        { text: "Price $489" },
+        { text: "Best use All around fishing" },
+        { text: "Ideal setup 9 foot 6 weight" },
       ]),
+      { type: "link", label: "Orvis Clearwater Combo", href: "https://sovrn.co/o9c5zuy" },
       h("Redington Vice Combo Best for Power and Distance"),
-      p("If the Clearwater is your all purpose tool, the Redington Vice is your power option.", ["the Clearwater", "all purpose", "the Redington"]),
+      p("If the Clearwater is your all purpose tool, the Redington Vice is your power option."),
       p("This rod is fast action, meaning it is stiffer and built for distance. That matters more than people think when you are dealing with wind, heavier flies, or larger water. It excels at throwing big streamers and bulky bass bugs that would feel clunky on softer rods."),
-      p("The tradeoff is that it is less forgiving for beginners, but if you have a decent cast, this rod opens up a lot of water.", ["opens up"]),
+      p("The tradeoff is that it is less forgiving for beginners, but if you have a decent cast, this rod opens up a lot of water."),
       list([
-        { text: "Price $280", bold: true },
-        { text: "Best use Windy lakes and big flies", bold: true },
-        { text: "Ideal setup 9 foot 6 or 7 weight", bold: true },
+        { text: "Price $280" },
+        { text: "Best use Windy lakes and big flies" },
+        { text: "Ideal setup 9 foot 6 or 7 weight" },
       ]),
       h("TFO NXT Black Label Combo Best for Simplicity"),
       p("The Temple Fork Outfitters NXT Black Label is one of the easiest ways to get into fly fishing without sacrificing quality."),
-      p("This combo comes ready to fish right out of the box. The rod leans toward a moderate fast action, making it easy to load and cast at shorter distances. That makes it perfect for ponds where you are often making quick, accurate casts instead of long distance casts.", ["long distance"]),
+      p("This combo comes ready to fish right out of the box. The rod leans toward a moderate fast action, making it easy to load and cast at shorter distances. That makes it perfect for ponds where you are often making quick, accurate casts instead of long distance casts."),
       p("It shines when targeting bluegill and smaller bass, but it still has enough backbone to handle bigger fish when needed."),
       list([
-        { text: "Price $180", bold: true },
-        { text: "Best use Beginners and short range pond fishing", bold: true },
-        { text: "Ideal setup 9 foot 5 weight", bold: true },
+        { text: "Price $180" },
+        { text: "Best use Beginners and short range pond fishing" },
+        { text: "Ideal setup 9 foot 5 weight" },
       ]),
       h("Sage Foundation with Lamson Liquid Best Premium Setup"),
       p("For anglers ready to step up, pairing a Sage Foundation rod with a Lamson Liquid reel delivers a noticeable jump in performance."),
-      p("The rod is fast action but refined. It is lighter in hand, more responsive, and more accurate at distance. You will feel the difference immediately when casting tighter loops or working more technical water.", ["working"]),
+      p("The rod is fast action but refined. It is lighter in hand, more responsive, and more accurate at distance. You will feel the difference immediately when casting tighter loops or working more technical water."),
       p("The Lamson reel adds a sealed drag system that is smooth and dependable, even under pressure."),
       p("This is not necessary for casual fishing, but if you spend a lot of time on the water, it is worth it."),
       list([
-        { text: "Price $600", bold: true },
-        { text: "Best use Experienced anglers and performance upgrade", bold: true },
-        { text: "Ideal setup 9 foot 6 weight", bold: true },
+        { text: "Price $600" },
+        { text: "Best use Experienced anglers and performance upgrade" },
+        { text: "Ideal setup 9 foot 6 weight" },
       ]),
       h("Echo Lift Combo Best Budget Option"),
       p("The Echo Lift combo proves you do not need to spend a lot to get started."),
-      p("It is a straightforward, no frills setup that still performs well enough for most pond and lake scenarios. The rod has a medium fast action that is easy to cast, and while the reel is basic, it gets the job done.", ["no frills"]),
+      p("It is a straightforward, no frills setup that still performs well enough for most pond and lake scenarios. The rod has a medium fast action that is easy to cast, and while the reel is basic, it gets the job done."),
       p("This is a great choice for someone testing the waters or for a backup rod you do not mind keeping in the truck."),
       list([
-        { text: "Price $250", bold: true },
-        { text: "Best use Budget conscious anglers", bold: true },
-        { text: "Ideal setup 9 foot 5 weight", bold: true },
+        { text: "Price $250" },
+        { text: "Best use Budget conscious anglers" },
+        { text: "Ideal setup 9 foot 5 weight" },
       ]),
       h("Final Thoughts What Actually Matters"),
       p("You can get lost comparing rods and reels, but for lakes and ponds, it really comes down to a few key decisions."),
@@ -574,6 +580,7 @@ export const articles: Article[] = [
       p("Action affects feel. Moderate is easier casting. Fast gives more power and distance."),
       p("Line is critical. A quality weight forward floating line can make or break your setup."),
       p("If you are only buying one combo, it is hard to argue against the Orvis Clearwater in a 6 weight. It covers nearly every scenario you will run into from bluegill beds to evening topwater bass bites."),
+      { type: "link", label: "Orvis Clearwater Combo", href: "https://sovrn.co/o9c5zuy" },
       p("And at the end of the day, that is what lake and pond fly fishing is all about. Being ready for whatever shows up in front of you."),
     ],
   },
