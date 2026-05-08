@@ -21,6 +21,11 @@ const recentArticles = [
   articles.find((article) => article.slug === "bass-on-the-long-rod"),
   articles.find((article) => article.slug === "muskrats-hoas-and-a-backyard-trapline"),
   articles.find((article) => article.slug === "invasive-carp-in-2026"),
+  articles.find((article) => article.slug === "the-truth-about-the-6-5-creedmoor"),
+  articles.find((article) => article.slug === "fewer-birds-over-the-wabash"),
+  articles.find(
+    (article) => article.slug === "the-5-best-fly-rod-and-reel-combos-for-lakes-and-ponds",
+  ),
 ].filter((article): article is Article => Boolean(article));
 
 export default function Home() {
