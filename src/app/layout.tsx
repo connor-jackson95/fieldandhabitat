@@ -7,7 +7,7 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} | Hunting, Fishing, Finance, Cooking, and Conservation`,
+    default: `${siteConfig.name} | Hunting, Fishing, Gear, Cooking, and Conservation`,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "fishing",
     "cooking",
     "conservation",
-    "finance",
+    "gear",
     "outdoor media",
   ],
   alternates: {

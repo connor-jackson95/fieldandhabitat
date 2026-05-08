@@ -1,7 +1,7 @@
 export type CategorySlug =
   | "hunting"
   | "fishing"
-  | "finance"
+  | "gear"
   | "conservation"
   | "cooking";
 
@@ -93,13 +93,13 @@ export const categories: Category[] = [
     featuredTags: ["Bass", "Trout", "Fly Fishing", "Boats"],
   },
   {
-    slug: "finance",
-    name: "Finance",
-    eyebrow: "Business",
+    slug: "gear",
+    name: "Gear",
+    eyebrow: "Field Kit",
     description:
-      "Coverage of the economics behind the outdoors, from access and land to industry shifts, business, and the cost of participation.",
+      "Measured coverage of field gear, tackle, optics, apparel, tools, and practical buying decisions that hold up outdoors.",
     accent: "from-[#4d5a4b] to-sand",
-    featuredTags: ["Industry", "Land", "Policy", "Markets"],
+    featuredTags: ["Optics", "Apparel", "Tackle", "Reviews"],
   },
   {
     slug: "conservation",
@@ -321,8 +321,8 @@ export const articles: Article[] = [
     title: "The Truth About the 6.5 Creedmoor: Facts, Myths, and Real Hunting Use",
     excerpt:
       "The 6.5 Creedmoor has become one of the most talked about rifle cartridges of the last decade.",
-    category: "hunting",
-    tags: ["Hunting", "6.5 Creedmoor"],
+    category: "gear",
+    tags: ["Gear", "Hunting", "6.5 Creedmoor"],
     publishedAt: "2026-04-24T10:51:43-04:00",
     readingTime: 6,
     author: authors[0],
@@ -459,7 +459,7 @@ export const articles: Article[] = [
     excerpt:
       "In parts of the Midwest, invasive carp now make up more than 70 percent of the total fish biomass in some river systems.",
     category: "conservation",
-    tags: ["Conservation", "Fishing", "Invasive Carp", "Indiana"],
+    tags: ["Fishing", "Conservation", "Invasive Carp", "Indiana"],
     publishedAt: "2026-05-08T01:29:00Z",
     updatedAt: "2026-05-08T01:29:00Z",
     readingTime: 5,
