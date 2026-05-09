@@ -88,15 +88,22 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
                   href={`/articles/${article.slug}`}
                   className="rounded-[1.75rem] border border-border bg-card p-6 shadow-editorial"
                 >
-                  {article.heroImage ? (
+                  {article.heroImage || article.slug === "follow-the-money-how-does-indiana-fund-conservation" ? (
                     <div className="mb-6 h-48 overflow-hidden rounded-[1.35rem] border border-border bg-surface">
                       <Image
-                        src={article.heroImage}
+                        src={
+                          article.heroImage ??
+                          "/Photos for Articles/FollowTheMoneyLogo.png"
+                        }
                         alt={article.title}
                         width={1600}
                         height={1000}
-                        className={`h-full w-full object-cover ${
-                          article.slug === "bass-on-the-long-rod" ? "object-top" : ""
+                        className={`h-full w-full ${
+                          article.slug === "follow-the-money-how-does-indiana-fund-conservation"
+                            ? "object-contain mix-blend-multiply"
+                            : `object-cover ${
+                                article.slug === "bass-on-the-long-rod" ? "object-top" : ""
+                              }`
                         }`}
                       />
                     </div>

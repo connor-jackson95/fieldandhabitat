@@ -34,6 +34,29 @@ function renderTextWithBold(text: string, boldPhrases: string[] = []) {
   );
 }
 
+function renderSegments(
+  segments: Array<
+    | { type: "text"; text: string }
+    | { type: "link"; label: string; href: string }
+  >,
+) {
+  return segments.map((segment, index) =>
+    segment.type === "link" ? (
+      <a
+        key={`${segment.href}-${index}`}
+        href={segment.href}
+        target="_blank"
+        rel="noreferrer"
+        className="font-semibold text-pine underline-offset-4 hover:underline"
+      >
+        {segment.label}
+      </a>
+    ) : (
+      <span key={`${segment.text}-${index}`}>{segment.text}</span>
+    ),
+  );
+}
+
 export async function generateMetadata({
   params,
 }: ArticlePageProps): Promise<Metadata> {
@@ -185,9 +208,11 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                     width={1600}
                     height={1000}
                     className={`w-full object-cover ${
-                      article.slug === "bass-on-the-long-rod"
-                        ? "h-[260px] object-top"
-                        : "h-auto"
+                      article.slug === "follow-the-money-how-does-indiana-fund-conservation"
+                        ? "h-[260px] object-contain mix-blend-multiply"
+                        : article.slug === "bass-on-the-long-rod"
+                          ? "h-[260px] object-top"
+                          : "h-auto"
                     }`}
                     priority
                   />
@@ -357,7 +382,9 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                       .filter(Boolean)
                       .join(" ")}
                   >
-                    {renderTextWithBold(block.text, block.boldPhrases)}
+                    {block.segments
+                      ? renderSegments(block.segments)
+                      : renderTextWithBold(block.text, block.boldPhrases)}
                   </p>
                 );
               })}

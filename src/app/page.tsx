@@ -17,10 +17,13 @@ export const metadata = buildMetadata({
 });
 
 const featuredArticle = articles[0];
+const followTheMoneyArticle = articles.find(
+  (article) => article.slug === "follow-the-money-how-does-indiana-fund-conservation",
+);
 const recentArticles = [
-  articles.find((article) => article.slug === "bass-on-the-long-rod"),
-  articles.find((article) => article.slug === "muskrats-hoas-and-a-backyard-trapline"),
   articles.find((article) => article.slug === "invasive-carp-in-2026"),
+  articles.find((article) => article.slug === "muskrats-hoas-and-a-backyard-trapline"),
+  articles.find((article) => article.slug === "bass-on-the-long-rod"),
   articles.find((article) => article.slug === "the-truth-about-the-6-5-creedmoor"),
   articles.find((article) => article.slug === "fewer-birds-over-the-wabash"),
   articles.find(
@@ -43,50 +46,83 @@ export default function Home() {
       <section className="border-b border-border/70 py-8 sm:py-10">
         <Container>
           <div className="rounded-[2rem] border border-border bg-card p-7 shadow-editorial sm:p-8">
-            <p className="text-xs uppercase tracking-[0.3em] text-moss">Featured Story</p>
-            <div className="mt-5 grid gap-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
-              <div className="space-y-4">
-                {featuredArticle ? (
-                  <>
-                    <h1 className="font-serif text-3xl leading-tight text-ink sm:text-4xl">
-                      {featuredArticle.title}
-                    </h1>
-                    <p className="max-w-2xl text-sm leading-7 text-muted sm:text-base">
-                      {featuredArticle.excerpt}
+            <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-stretch">
+              <div className="rounded-[1.75rem] border border-border bg-surface px-6 py-6">
+                <p className="text-xs uppercase tracking-[0.3em] text-moss">Featured Story</p>
+                <div className="mt-5 space-y-4">
+                  {featuredArticle ? (
+                    <>
+                      {featuredArticle.heroImage ? (
+                        <div className="overflow-hidden rounded-[1.35rem] border border-border bg-card">
+                          <Image
+                            src={featuredArticle.heroImage}
+                            alt={featuredArticle.title}
+                            width={1600}
+                            height={1000}
+                            className="h-52 w-full object-cover"
+                            priority
+                          />
+                        </div>
+                      ) : null}
+                      <h1 className="font-serif text-3xl leading-tight text-ink sm:text-4xl">
+                        {featuredArticle.title}
+                      </h1>
+                      <p className="max-w-2xl text-sm leading-7 text-muted sm:text-base">
+                        {featuredArticle.excerpt}
+                      </p>
+                      <Link
+                        href={`/articles/${featuredArticle.slug}`}
+                        className="inline-flex rounded-full bg-pine px-5 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-[#f5efe4] hover:bg-pine-deep"
+                      >
+                        Read Story
+                      </Link>
+                    </>
+                  ) : (
+                    <>
+                      <p className="font-serif text-3xl leading-tight text-ink sm:text-4xl">
+                        Reserved for a lead story with strong photography and editorial emphasis.
+                      </p>
+                      <p className="max-w-2xl text-sm leading-7 text-muted sm:text-base">
+                        Use this space for your biggest current piece, seasonal package, or
+                        conservation-driven feature once publishing begins.
+                      </p>
+                    </>
+                  )}
+                </div>
+              </div>
+              <div className="rounded-[1.75rem] border border-border bg-surface px-6 py-6">
+                <p className="text-xs uppercase tracking-[0.3em] text-moss">
+                  Follow The Money Series
+                </p>
+                {followTheMoneyArticle ? (
+                  <div className="mt-5 space-y-4">
+                    <div className="overflow-hidden rounded-[1.35rem] border border-border">
+                      <Image
+                        src="/Photos for Articles/FollowTheMoneyLogo.png"
+                        alt={followTheMoneyArticle.title}
+                        width={1600}
+                        height={1000}
+                        className="h-56 w-full object-contain mix-blend-multiply"
+                        priority
+                      />
+                    </div>
+                    <h2 className="font-serif text-2xl leading-tight text-ink sm:text-3xl">
+                      {followTheMoneyArticle.title}
+                    </h2>
+                    <p className="text-sm leading-7 text-muted sm:text-base">
+                      {followTheMoneyArticle.excerpt}
                     </p>
                     <Link
-                      href={`/articles/${featuredArticle.slug}`}
-                      className="inline-flex rounded-full bg-pine px-5 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-[#f5efe4] hover:bg-pine-deep"
+                      href={`/articles/${followTheMoneyArticle.slug}`}
+                      className="inline-flex rounded-full border border-border bg-card px-5 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-pine hover:bg-surface-strong"
                     >
                       Read Story
                     </Link>
-                  </>
+                  </div>
                 ) : (
-                  <>
-                    <p className="font-serif text-3xl leading-tight text-ink sm:text-4xl">
-                      Reserved for a lead story with strong photography and editorial emphasis.
-                    </p>
-                    <p className="max-w-2xl text-sm leading-7 text-muted sm:text-base">
-                      Use this space for your biggest current piece, seasonal package, or
-                      conservation-driven feature once publishing begins.
-                    </p>
-                  </>
+                  <div className="mt-5 h-full rounded-[1.35rem] bg-gradient-to-br from-surface via-[#e7ddca] to-surface-strong texture-grid" />
                 )}
               </div>
-              {featuredArticle?.heroImage ? (
-                <div className="overflow-hidden rounded-[1.75rem] border border-border bg-surface">
-                  <Image
-                    src={featuredArticle.heroImage}
-                    alt={featuredArticle.title}
-                    width={1600}
-                    height={1000}
-                    className="h-full w-full object-cover"
-                    priority
-                  />
-                </div>
-              ) : (
-                <div className="h-56 rounded-[1.75rem] bg-gradient-to-br from-surface via-[#e7ddca] to-surface-strong texture-grid" />
-              )}
             </div>
           </div>
         </Container>
@@ -104,7 +140,9 @@ export default function Home() {
               <Link
                 key={article.slug}
                 href={`/articles/${article.slug}`}
-                className="rounded-[1.75rem] border border-border bg-card p-6 shadow-editorial"
+                className={`rounded-[1.75rem] border border-border bg-card shadow-editorial ${
+                  article.heroImage ? "p-6" : "px-6 py-5"
+                }`}
               >
                 {article.heroImage ? (
                   <div className="mb-6 h-48 overflow-hidden rounded-[1.35rem] border border-border bg-surface">
@@ -118,9 +156,7 @@ export default function Home() {
                       }`}
                     />
                   </div>
-                ) : (
-                  <div className="mb-6 h-48 rounded-[1.35rem] bg-gradient-to-br from-surface via-[#efe5d4] to-surface-strong texture-grid" />
-                )}
+                ) : null}
                 <div className="space-y-3">
                   <p className="text-xs uppercase tracking-[0.25em] text-moss">
                     {article.tags.join(" / ")}
