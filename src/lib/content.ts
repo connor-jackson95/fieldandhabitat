@@ -183,7 +183,7 @@ export const articles: Article[] = [
     category: "hunting",
     tags: ["Hunting", "Conservation"],
     publishedAt: "2026-05-11T12:00:00-04:00",
-    heroImage: "/Photos for Articles/Bison.jpeg",
+    heroImage: "/Photos for Articles/Fall Landscape.jpeg",
     readingTime: 5,
     author: authors[0],
     body: [
