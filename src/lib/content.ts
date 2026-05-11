@@ -176,6 +176,44 @@ const list = (
 
 export const articles: Article[] = [
   {
+    slug: "trump-administration-pushes-to-expand-hunting-access-on-federal-lands",
+    title: "Trump Administration Pushes to Expand Hunting Access on Federal Lands",
+    excerpt:
+      "The Trump administration is moving forward with a major proposal to expand hunting, fishing, and trapping access across federally managed lands in the lower 48 states.",
+    category: "hunting",
+    tags: ["Hunting", "Conservation"],
+    publishedAt: "2026-05-11T12:00:00-04:00",
+    heroImage: "/Photos for Articles/Bison.jpeg",
+    readingTime: 5,
+    author: authors[0],
+    body: [
+      p("The Trump administration is moving forward with a major proposal to expand hunting, fishing, and trapping access across federally managed lands in the lower 48 states."),
+      p("In early 2026, Interior Secretary Doug Burgum directed federal agencies to review existing restrictions on hunting and fishing opportunities within lands managed by the National Park Service and the United States Fish and Wildlife Service. According to the administration, the goal is to remove unnecessary barriers that limit public access to outdoor recreation and align federal regulations more closely with state wildlife management laws."),
+      p("The proposal affects dozens of federal sites across the country, including national wildlife refuges, recreation areas, wilderness areas, national preserves, and select units within the national park system where hunting was already allowed in some form."),
+      p("The announcement quickly sparked confusion online, with many people believing the administration planned to open iconic national parks like Yellowstone National Park or Yosemite National Park to unrestricted hunting. That is not the case."),
+      p("Most traditional national parks still prohibit hunting because those protections were written directly into federal law when the parks were created. Congress would likely need to approve major changes to hunting access inside those flagship parks. Instead, the current proposal mainly focuses on lands where hunting, fishing, or trapping already exist in some capacity but are regulated differently by federal agencies than by surrounding state wildlife agencies."),
+      p("The administration says the proposal is intended to restore traditional outdoor access on federal lands while reversing what it views as years of growing regulatory restrictions. Officials within the Interior Department argue that hunters, anglers, and trappers have faced increasing limitations on land funded and owned by the public, even in areas where those activities were historically allowed. The administration has also emphasized the financial role sportsmen play in conservation through license sales and excise taxes, arguing that maintaining strong participation in hunting and fishing is important for long term wildlife funding. Supporters of the proposal also point to declining hunter participation nationwide and believe expanding access could help recruit and retain more outdoorsmen and women in the future."),
+      p("In many cases, the proposal is less about creating entirely new hunting opportunities and more about loosening federal restrictions that sportsmen have argued became overly complicated or restrictive over time."),
+      p("Examples of proposed or discussed changes include:"),
+      list([
+        { text: "Expanded hunting seasons in certain federal recreation areas" },
+        { text: "Additional acreage opened to hunting or fishing access" },
+        { text: "Broader trapping allowances where state law already permits trapping" },
+        { text: "Fewer federal restrictions on hunting methods or equipment" },
+        { text: "Expanded use of hunting dogs in some wildlife areas" },
+        { text: "More flexibility for game retrieval and field processing" },
+        { text: "Greater alignment between state hunting regulations and federal land rules" },
+      ]),
+      p("The Interior Department has also discussed increasing access to lands that have historically been difficult for hunters or anglers to use because of administrative closures, seasonal limitations, or site-specific restrictions."),
+      p("Critics of the proposal argue expanded hunting and trapping access could create conflicts with hikers, campers, wildlife photographers, and other recreation users who visit federal lands expecting a more preservation focused experience. Some conservation organizations have also raised concerns about hunting activity moving closer to heavily visited recreation areas or sensitive wildlife habitats."),
+      p("For now, many of the proposed changes remain under agency review and public comment processes, and legal challenges are likely as site specific regulations begin to develop."),
+      h("Editor’s Note"),
+      p("First, I want to state that more access for hunting and fishing on public lands will almost always be the preferred option. Expanding opportunities for hunters and anglers to access federally managed land is something many sportsmen have supported for years, especially as access continues to shrink in some parts of the country."),
+      p("However, I also believe the administration is throwing a bone to hunters and anglers in the wake of controversy surrounding potential public land sell off discussions and the decision related to mining near the Boundary Waters Canoe Area Wilderness. It feels like the administration is attempting to backpedal and win back the support of hunters and anglers so that when the next voting cycle comes around, they have a strong talking point tied to public land access."),
+      p("That does not necessarily mean the proposal itself is bad. Increased access is still increased access, and many sportsmen will welcome the opportunity regardless of the political motivations behind it. But public land users are paying closer attention than ever to how administrations balance conservation, resource extraction, recreation, and access. For many hunters and anglers, actions surrounding public lands will likely matter just as much as campaign promises in future elections."),
+    ],
+  },
+  {
     slug: "possible-changes-coming-for-indiana-bobcat-season",
     title: "Possible Changes Coming for Indiana Bobcat Season",
     excerpt:
