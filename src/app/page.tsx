@@ -59,7 +59,12 @@ export default function Home() {
                             alt={featuredArticle.title}
                             width={1600}
                             height={1000}
-                            className="h-52 w-full object-cover"
+                            className={`h-52 w-full object-cover ${
+                              featuredArticle.slug ===
+                              "trump-administration-pushes-to-expand-hunting-access-on-federal-lands"
+                                ? "object-center"
+                                : ""
+                            }`}
                             priority
                           />
                         </div>
