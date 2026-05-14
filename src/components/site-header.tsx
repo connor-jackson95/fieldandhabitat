@@ -5,6 +5,7 @@ import { Container } from "@/components/container";
 const links = [
   { href: "/articles", label: "Articles" },
   { href: "/categories", label: "Categories" },
+  { href: "/fishing-reports", label: "Fishing Reports" },
   { href: "/writers", label: "Writers" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },

@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { articles, categories } from "@/lib/content";
+import { fishingReportRegions } from "@/lib/fishing-reports";
 import { siteConfig } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -8,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/articles",
     "/articles/template",
     "/categories",
+    "/fishing-reports",
     "/writers",
     "/about",
     "/contact",
@@ -26,5 +28,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(article.updatedAt ?? article.publishedAt),
   }));
 
-  return [...staticPages, ...categoryPages, ...articlePages];
+  const fishingReportPages = fishingReportRegions.map((region) => ({
+    url: `${siteConfig.url}/fishing-reports/${region.slug}`,
+    lastModified: new Date(),
+  }));
+
+  return [...staticPages, ...categoryPages, ...articlePages, ...fishingReportPages];
 }
